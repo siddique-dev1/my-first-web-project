@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taleem Hub - Best Online Academy Pakistan</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            max-width: 100%;
+            width: 100%;
+        }
+        img, svg, video { max-width: 100%; height: auto; }
+        .navbar {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #2563eb, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+        .section-title i { -webkit-text-fill-color: #2563eb; color: #2563eb; }
+        .logo i { -webkit-text-fill-color: #2563eb; }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+            flex-wrap: nowrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .nav-links a:hover { color: #2563eb; }
+        .nav-btn {
+            background: linear-gradient(45deg, #2563eb, #1e40af);
+            color: white;
+            padding: 0.7rem 1.3rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+        }
+        .hero {
+            background:
+                linear-gradient(135deg, rgba(37,99,235,0.88) 0%, rgba(30,64,175,0.88) 50%, rgba(30,58,138,0.92) 100%),
+                url('images/photo5.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            min-height: 100svh;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 110px 1.5rem 60px;
+        }
+        .hero-content {
+            max-width: 900px;
+            padding: 0 0.5rem;
+            width: 100%;
+        }
+        .hero h1 {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 2;
+            margin-bottom: 1.5rem;
+            direction: rtl;
+            color: #ffffff;
+        }
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-primary, .btn-secondary {
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: white;
+            color: #2563eb;
+            box-shadow: 0 15px 35px rgba(255,255,255,0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(255,255,255,0.4);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .btn-secondary:hover {
+            background: white;
+            color: #2563eb;
+        }
+        .section {
+            padding: 100px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            scroll-margin-top: 90px;
+        }
+        #home, #notes, #tutors, #reviews, #contact {
+            scroll-margin-top: 90px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #2563eb, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .courses-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            padding: 1rem 2rem;
+            border: 2px solid #e5e7eb;
+            background: white;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+        }
+        .tab-btn.active {
+            background: linear-gradient(45deg, #2563eb, #1e40af);
+            color: white;
+            border-color: #2563eb;
+        }
+        .courses-grid, .notes-grid, .guess-grid, .tutors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .course-card, .note-card, .guess-card, .tutor-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .course-card:hover, .note-card:hover, .guess-card:hover, .tutor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+        .course-icon { font-size: 3rem; margin-bottom: 1rem; color: #2563eb; }
+        .download-btn {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(16,185,129,0.4);
+        }
+        .tutor-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: linear-gradient(45deg, #2563eb, #1e40af);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            overflow: hidden;
+        }
+        .tutor-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .rating { color: #fbbf24; }
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+        }
+        .form-group { margin-bottom: 1rem; }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #2563eb;
+        }
+        .submit-btn {
+            background: linear-gradient(45deg, #2563eb, #1e40af);
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37,99,235,0.4);
+        }
+        .contact-info-box {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            padding: 1.2rem 1.5rem;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+        .contact-item i {
+            font-size: 1.4rem;
+            color: #2563eb;
+            width: 30px;
+            text-align: center;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+            color: white;
+            padding: 60px 0 0;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+        .footer-brand .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .footer-brand p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        .social-icon:hover {
+            background: white;
+            color: #2563eb;
+            transform: translateY(-3px);
+        }
+        .footer-col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: #60a5fa;
+            border-radius: 2px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 6px;
+        }
+        .footer-col ul li a i {
+            font-size: 0.7rem;
+            color: #60a5fa;
+        }
+        .footer-newsletter {
+            margin-top: 0.5rem;
+        }
+        .footer-newsletter p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+        .newsletter-form {
+            display: flex;
+            gap: 8px;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 10px 14px;
+            border-radius: 25px;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            outline: none;
+        }
+        .newsletter-form button {
+            background: #60a5fa;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            font-family: 'Poppins', sans-serif;
+            transition: background 0.3s;
+            white-space: nowrap;
+        }
+        .newsletter-form button:hover { background: white; color: #2563eb; }
+        .footer-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 2.5rem 0;
+        }
+        .footer-stat {
+            background: rgba(255,255,255,0.06);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .footer-stat-num {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+        .footer-stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 4px;
+        }
+        .footer-bottom {
+            background: rgba(0,0,0,0.2);
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-bottom p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+        .footer-bottom-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .footer-bottom-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+        .footer-bottom-links a:hover { color: white; }
+
+        .notes-search { margin-bottom: 2rem; }
+        .notes-search input {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            outline: none;
+        }
+        .notes-search input:focus { border-color: #2563eb; }
+        .guess-year {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+        .review-card { text-align: left; }
+        .review-card .review-stars { color: #fbbf24; margin-bottom: 0.6rem; }
+        .review-card .review-comment { color: #4b5563; font-style: italic; margin-bottom: 1rem; }
+        .review-card .review-footer { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+        .review-card .review-student { font-weight: 700; color: #1e3a8a; }
+        .review-card .review-tutor { color: #6b7280; }
+
+        /* Reviews slider */
+        .reviews-slider {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .reviews-viewport { overflow: hidden; flex: 1; }
+        .reviews-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .review-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 0 0.5rem;
+        }
+        .rs-arrow {
+            background: white;
+            border: 2px solid #e5e7eb;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: #2563eb;
+            font-size: 1rem;
+            flex-shrink: 0;
+            transition: all 0.3s;
+        }
+        .rs-arrow:hover { background: #2563eb; color: white; border-color: #2563eb; }
+        .reviews-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 1.5rem;
+        }
+        .reviews-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #e5e7eb;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .reviews-dots span.active { background: #2563eb; width: 26px; border-radius: 6px; }
+
+        /* Star rating input */
+        .star-input { display: flex; gap: 6px; padding: 0.5rem 0; }
+        .star-input i {
+            font-size: 1.7rem;
+            color: #d1d5db;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .star-input i.active { color: #fbbf24; }
+
+        @media (max-width: 900px) {
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .footer-stats { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 1080px) {
+            .hamburger { display: flex; }
+            .nav-btn { display: none; }
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                height: 100svh;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: white;
+                padding: 2rem;
+                gap: 1.6rem;
+                z-index: 2000;
+                overflow-y: auto;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { font-size: 1.3rem; }
+            .hamburger { z-index: 2001; position: relative; }
+            .hamburger span { transition: all 0.25s ease; transform-origin: center; }
+            .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+            body.menu-open { overflow: hidden; }
+            .nav-links a { font-size: 1.05rem; }
+        }
+        @media (max-width: 768px) {
+            .hero { padding: 100px 1.2rem 50px; }
+            .hero h1 { font-size: 2rem; line-height: 1.8; margin-bottom: 1.2rem; }
+            .hero .subtitle { font-size: 1.1rem; margin-bottom: 1.5rem; }
+            .stats { gap: 1.5rem; margin-bottom: 2rem; }
+            .stat-number { font-size: 2.2rem; }
+            .contact-content { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; }
+            .footer-stats { grid-template-columns: repeat(2, 1fr); }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 400px) {
+            .hero h1 { font-size: 1.6rem; }
+        }
+
+        /* ===== ADMIN PANEL ===== */
+        #adminOverlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15,23,42,0.75);
+            z-index: 3000;
+            padding: 2rem 1rem;
+            overflow-y: auto;
+        }
+        #adminOverlay.active { display: block; }
+        .admin-box {
+            max-width: 420px;
+            margin: 5rem auto;
+            background: white;
+            border-radius: 18px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+        .admin-box h2 { color: #1e3a8a; margin-bottom: 1.5rem; }
+        .admin-box input {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+        }
+        .admin-box input:focus { border-color: #2563eb; }
+        .admin-btn {
+            background: linear-gradient(45deg,#2563eb,#1e40af);
+            color: white;
+            border: none;
+            padding: 0.9rem 1.5rem;
+            border-radius: 10px;
+            width: 100%;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+        .admin-err { color: #dc2626; font-size: 0.85rem; margin-bottom: 0.5rem; min-height: 18px; }
+
+        .admin-dashboard {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 18px;
+            padding: 2rem;
+        }
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 1rem;
+        }
+        .admin-header h2 { color: #1e3a8a; }
+        .admin-logout {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .admin-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .admin-tab-btn {
+            padding: 0.6rem 1.2rem;
+            border: 2px solid #e5e7eb;
+            background: #f8fafc;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+        }
+        .admin-tab-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+        .admin-panel-section { display: none; }
+        .admin-panel-section.active { display: block; }
+        .admin-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            background: #f8fafc;
+            padding: 1.2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        }
+        .admin-form input, .admin-form select {
+            padding: 0.7rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+        }
+        .admin-form .full { grid-column: 1 / -1; }
+        .admin-add-btn {
+            background: linear-gradient(45deg,#10b981,#059669);
+            color: white;
+            border: none;
+            padding: 0.7rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+        .admin-list-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            margin-bottom: 0.6rem;
+        }
+        .admin-list-item img.thumb {
+            width: 45px; height: 45px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+        }
+        .admin-list-item .info { flex: 1; }
+        .admin-list-item .info strong { display: block; }
+        .admin-list-item .info span { color: #6b7280; font-size: 0.85rem; }
+        .admin-del-btn {
+            background: #fee2e2;
+            color: #dc2626;
+            border: none;
+            padding: 0.5rem 0.9rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .admin-close-x {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 3001;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><i class="fas fa-graduation-cap"></i> Taleem Hub</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#guess">Guess Papers</a></li>
+                <li><a href="#tutors">Tutors</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a onclick="openAdmin()">Admin</a></li>
+            </ul>
+            <a href="#courses" class="nav-btn">Enroll Now</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 lang="ur" dir="rtl">اپنی تعلیم کو آسان بنائیں</h1>
+            <p class="subtitle">Pakistan's No.1 Online Academy | Matric, FSc, Academy Classes</p>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">50K+</div>
+                    <div>Students</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">200+</div>
+                    <div>Courses</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">95%</div>
+                    <div>Pass Rate</div>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#courses" class="btn-primary">Explore Courses</a>
+                <a href="#notes" class="btn-secondary">Free Notes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" class="section">
+        <h2 class="section-title">Our Courses</h2>
+        <div class="courses-tabs">
+            <button class="tab-btn active" onclick="showTab('matric', this)">Matric</button>
+            <button class="tab-btn" onclick="showTab('inter', this)">FSc/Inter</button>
+            <button class="tab-btn" onclick="showTab('academy', this)">Academy</button>
+        </div>
+        <div id="matric-courses" class="courses-grid"></div>
+        <div id="inter-courses" class="courses-grid" style="display:none;"></div>
+        <div id="academy-courses" class="courses-grid" style="display:none;"></div>
+    </section>
+
+    <!-- Notes -->
+    <section id="notes" style="background:#f8fafc; padding: 100px 0;">
+        <div class="section" style="padding-top:0; padding-bottom:0;">
+            <h2 class="section-title"><i class="fas fa-book-open"></i> Free Notes & Past Papers</h2>
+            <div class="notes-search">
+                <select id="notesClassFilter" onchange="renderNotes()" style="width:100%;max-width:500px;display:block;margin:0 auto 1rem;padding:1rem 1.5rem;border:2px solid #e5e7eb;border-radius:50px;font-family:'Poppins',sans-serif;font-size:1rem;outline:none;background:white;"></select>
+                <input type="text" id="notesSearch" placeholder="Search subject... (Maths, Physics, etc)" oninput="renderNotes()">
+            </div>
+            <div class="notes-grid" id="notesGrid"></div>
+        </div>
+    </section>
+
+    <!-- Guess Papers -->
+    <section id="guess" class="section">
+        <h2 class="section-title"><i class="fas fa-bullseye"></i> Guess Papers 2026</h2>
+        <div class="notes-search">
+            <select id="guessClassFilter" onchange="renderGuess()" style="width:100%;max-width:500px;display:block;margin:0 auto;padding:1rem 1.5rem;border:2px solid #e5e7eb;border-radius:50px;font-family:'Poppins',sans-serif;font-size:1rem;outline:none;background:white;"></select>
+        </div>
+        <div class="guess-grid" id="guessGrid"></div>
+    </section>
+
+    <!-- Tutors -->
+    <section id="tutors" style="background:#f8fafc; padding: 100px 0;">
+        <div class="section" style="padding-top:0; padding-bottom:0;">
+            <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> Expert Tutors</h2>
+            <div class="tutors-grid" id="tutorsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Student Reviews -->
+    <section id="reviews" class="section">
+        <h2 class="section-title"><i class="fas fa-comment-dots"></i> Student Reviews</h2>
+
+        <div class="reviews-slider">
+            <button class="rs-arrow" onclick="prevReviewSlide()"><i class="fas fa-chevron-left"></i></button>
+            <div class="reviews-viewport">
+                <div class="reviews-track" id="reviewsTrack"></div>
+            </div>
+            <button class="rs-arrow" onclick="nextReviewSlide()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="reviews-dots" id="reviewsDots"></div>
+
+        <div class="contact-form" style="max-width:600px;margin:3rem auto 0;">
+            <h3 style="margin-bottom:1.5rem; color:#1e3a8a; font-size:1.3rem;">Apna Review Likhein</h3>
+            <div class="form-group">
+                <input type="text" id="r_studentName" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <select id="r_tutorName"></select>
+            </div>
+            <div class="form-group">
+                <label style="display:block;font-size:0.85rem;color:#6b7280;margin-bottom:4px;">Rating</label>
+                <div class="star-input" id="r_ratingStars">
+                    <i class="fas fa-star active" data-val="1" onclick="setReviewRating(1)"></i>
+                    <i class="fas fa-star active" data-val="2" onclick="setReviewRating(2)"></i>
+                    <i class="fas fa-star active" data-val="3" onclick="setReviewRating(3)"></i>
+                    <i class="fas fa-star active" data-val="4" onclick="setReviewRating(4)"></i>
+                    <i class="fas fa-star active" data-val="5" onclick="setReviewRating(5)"></i>
+                </div>
+                <input type="hidden" id="r_rating" value="5">
+            </div>
+            <div class="form-group">
+                <textarea id="r_comment" placeholder="Apna comment likhein..." rows="3"></textarea>
+            </div>
+            <button class="submit-btn" onclick="submitReview()">Submit Review</button>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <h2 class="section-title"><i class="fas fa-phone-volume"></i> Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-info-box">
+                <h3 style="font-size:1.5rem; font-weight:700; color:#1e3a8a; margin-bottom:0.5rem;">Ready to Start Your Journey?</h3>
+                <p style="color:#6b7280; margin-bottom:1rem;">Get in touch with us — we're here to help you succeed!</p>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div><strong>Phone:</strong> 0300-1234567</div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div><strong>Email:</strong> info@taleemhub.pk</div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div><strong>Address:</strong> Gujar Khan, Rawalpindi, Punjab</div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp" style="color:#25d366;"></i>
+                    <div><strong>WhatsApp:</strong> 0300-1234567</div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div><strong>Hours:</strong> Mon–Sat: 9:00 AM – 8:00 PM</div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3 style="margin-bottom:1.5rem; color:#1e3a8a; font-size:1.3rem;">Send Us a Message</h3>
+                <div class="form-group">
+                    <input type="text" placeholder="Your Full Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Phone Number or Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Subject (e.g. Physics Class 10)">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your message..." rows="4"></textarea>
+                </div>
+                <button class="submit-btn" onclick="alert('Message sent! We will contact you soon.')">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Quick Stats Bar -->
+            <div class="footer-stats">
+                <div class="footer-stat">
+                    <div class="footer-stat-num">50K+</div>
+                    <div class="footer-stat-label">Happy Students</div>
+                </div>
+                <div class="footer-stat">
+                    <div class="footer-stat-num">200+</div>
+                    <div class="footer-stat-label">Courses Available</div>
+                </div>
+                <div class="footer-stat">
+                    <div class="footer-stat-num">95%</div>
+                    <div class="footer-stat-label">Pass Rate</div>
+                </div>
+                <div class="footer-stat">
+                    <div class="footer-stat-num">50+</div>
+                    <div class="footer-stat-label">Expert Tutors</div>
+                </div>
+            </div>
+
+            <!-- Footer Top Grid -->
+            <div class="footer-top">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo"><i class="fas fa-graduation-cap"></i> Taleem Hub</div>
+                    <p>Pakistan's most trusted online learning platform for Matric, Intermediate and Academy students. Free notes, guess papers and expert tutors — all in one place.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="footer-newsletter" style="margin-top:1.5rem;">
+                        <p>Get notified about new courses & guess papers:</p>
+                        <div class="newsletter-form">
+                            <input type="text" placeholder="Your phone / email">
+                            <button onclick="alert('Subscribed!')">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#courses"><i class="fas fa-chevron-right"></i> Our Courses</a></li>
+                        <li><a href="#notes"><i class="fas fa-chevron-right"></i> Free Notes</a></li>
+                        <li><a href="#guess"><i class="fas fa-chevron-right"></i> Guess Papers</a></li>
+                        <li><a href="#tutors"><i class="fas fa-chevron-right"></i> Expert Tutors</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Past Papers</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> MCQ Practice</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Video Lectures</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> MDCAT Prep</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> ECAT Prep</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Online Tests</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Refund Policy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+            <p>© 2026 TaleemHub. All rights reserved. | Pakistan's No.1 Online Learning Platform</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== ADMIN OVERLAY ===== -->
+    <div id="adminOverlay">
+        <button class="admin-close-x" onclick="closeAdmin()"><i class="fas fa-times"></i></button>
+
+        <!-- Login -->
+        <div class="admin-box" id="adminLoginBox">
+            <h2><i class="fas fa-lock"></i> Admin Login</h2>
+            <div class="admin-err" id="adminErr"></div>
+            <input type="email" id="adminEmail" placeholder="Admin Email">
+            <input type="password" id="adminPass" placeholder="Password">
+            <button class="admin-btn" onclick="adminLogin()">Login</button>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="admin-dashboard" id="adminDashboard" style="display:none;">
+            <div class="admin-header">
+                <h2>Admin Panel</h2>
+                <button class="admin-logout" onclick="adminLogout()">Logout</button>
+            </div>
+            <div class="admin-tabs">
+                <button class="admin-tab-btn active" onclick="showAdminTab('tutors', this)">Tutors</button>
+                <button class="admin-tab-btn" onclick="showAdminTab('courses', this)">Courses</button>
+                <button class="admin-tab-btn" onclick="showAdminTab('notes', this)">Notes</button>
+                <button class="admin-tab-btn" onclick="showAdminTab('guess', this)">Guess Papers</button>
+                <button class="admin-tab-btn" onclick="showAdminTab('reviews', this)">Reviews</button>
+            </div>
+
+            <!-- Tutors tab -->
+            <div class="admin-panel-section active" id="admin-tutors">
+                <div class="admin-form">
+                    <input type="text" id="t_name" placeholder="Tutor Name">
+                    <input type="text" id="t_subject" placeholder="Subject">
+                    <input type="text" id="t_rating" placeholder="Rating (e.g. 4.9)">
+                    <input type="text" id="t_reviews" placeholder="Reviews count (e.g. 1200+)">
+                    <input type="text" id="t_image" placeholder="Image path (e.g. images/photo1.jpg)" class="full">
+                    <button class="admin-add-btn full" onclick="addTutor()">+ Add Tutor</button>
+                </div>
+                <div id="adminTutorsList"></div>
+            </div>
+
+            <!-- Courses tab -->
+            <div class="admin-panel-section" id="admin-courses">
+                <div class="admin-form">
+                    <select id="c_category" class="full">
+                        <option value="matric">Matric</option>
+                        <option value="inter">FSc/Inter</option>
+                        <option value="academy">Academy</option>
+                    </select>
+                    <input type="text" id="c_title" placeholder="Course Title">
+                    <input type="text" id="c_icon" placeholder="Icon class (e.g. fas fa-calculator)">
+                    <input type="text" id="c_desc" placeholder="Description" class="full">
+                    <input type="text" id="c_price" placeholder="Price (e.g. Rs. 2,500)">
+                    <button class="admin-add-btn full" onclick="addCourse()">+ Add Course</button>
+                </div>
+                <div id="adminCoursesList"></div>
+            </div>
+
+            <!-- Notes tab -->
+            <div class="admin-panel-section" id="admin-notes">
+                <div class="admin-form">
+                    <select id="n_class">
+                        <option value="9th Class">9th Class</option>
+                        <option value="10th Class">10th Class</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                    </select>
+                    <input type="text" id="n_subject" placeholder="Subject (e.g. Maths, Java, Bootstrap)">
+                    <input type="text" id="n_desc" placeholder="Description" class="full">
+                    <input type="text" id="n_pdf" placeholder="PDF file path (e.g. notes/maths-9th.pdf)" class="full">
+                    <button class="admin-add-btn full" onclick="addNote()">+ Add Note</button>
+                </div>
+                <div id="adminNotesList"></div>
+            </div>
+
+            <!-- Guess papers tab -->
+            <div class="admin-panel-section" id="admin-guess">
+                <div class="admin-form">
+                    <select id="g_class">
+                        <option value="9th Class">9th Class</option>
+                        <option value="10th Class">10th Class</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                    </select>
+                    <input type="text" id="g_subject" placeholder="Subject (e.g. Physics, Java, Bootstrap)">
+                    <input type="text" id="g_desc" placeholder="Description" class="full">
+                    <input type="text" id="g_pdf" placeholder="PDF file path (e.g. guess/physics-9th.pdf)" class="full">
+                    <button class="admin-add-btn full" onclick="addGuess()">+ Add Guess Paper</button>
+                </div>
+                <div id="adminGuessList"></div>
+            </div>
+
+            <!-- Reviews tab -->
+            <div class="admin-panel-section" id="admin-reviews">
+                <p style="color:#6b7280;margin-bottom:1rem;font-size:0.9rem;">Students khud website se review submit kartay hain. Yahan se aap ghair-mauzu reviews delete kar saktay hain.</p>
+                <div id="adminReviewsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        /* ================= FIREBASE SETUP ================= */
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+        import {
+            getFirestore, collection, getDocs, addDoc, deleteDoc, doc
+        } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+        import {
+            onSnapshot
+        } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+        import {
+            getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged
+        } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCYcnuEk3JDBTbKb7VL9ziHaTAGM4yqpT8",
+            authDomain: "taleem-hub-3d471.firebaseapp.com",
+            projectId: "taleem-hub-3d471",
+            storageBucket: "taleem-hub-3d471.firebasestorage.app",
+            messagingSenderId: "194791812626",
+            appId: "1:194791812626:web:5847fa0ac937961892f2cb",
+            measurementId: "G-96NJ4TY5HW"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
+        /* ================= IN-MEMORY CACHE (filled live from Firestore) ================= */
+        var tutorsData = [];
+        var coursesData = { matric: [], inter: [], academy: [] };
+        var notesData = [];
+        var guessData = [];
+        var reviewsData = [];
+        var currentReviewSlide = 0;
+        var reviewAutoplayTimer = null;
+
+        /* ================= SEED DATA (only used once, to fill a brand-new empty database) ================= */
+        var seedTutors = [
+            { name: "Sir Siddique", image: "", initials: "MS", subject: "Maths & Physics Expert", rating: "4.9", reviews: "1200+" },
+            { name: "Miss Aliya", image: "", initials: "MS", subject: "Biology & Chemistry", rating: "4.8", reviews: "950+" },
+            { name: "Sir Ahmed", image: "", initials: "AS", subject: "English & Islamiat", rating: "5.0", reviews: "800+" },
+            { name: "Miss Sobia", image: "", initials: "FK", subject: "Pak Studies & Urdu", rating: "4.9", reviews: "650+" }
+        ];
+        var seedCourses = {
+            matric: [
+                { icon: "fas fa-calculator", title: "Maths 9th", desc: "Complete course with video lectures & practice", price: "Rs. 2,500" },
+                { icon: "fas fa-flask", title: "Science 10th", desc: "Physics, Chemistry, Biology full course", price: "Rs. 3,500" },
+                { icon: "fas fa-book", title: "English 9th–10th", desc: "Grammar, Essay, Comprehension", price: "Rs. 2,000" }
+            ],
+            inter: [
+                { icon: "fas fa-atom", title: "Physics FSc Part 1 & 2", desc: "Numericals, theory and MCQs — full board prep", price: "Rs. 4,000" },
+                { icon: "fas fa-vial", title: "Chemistry FSc Part 1 & 2", desc: "Reactions, equations and MDCAT preparation", price: "Rs. 4,000" },
+                { icon: "fas fa-dna", title: "Biology FSc Part 1 & 2", desc: "Diagrams, genetics and evolution — MDCAT ready", price: "Rs. 4,000" }
+            ],
+            academy: [
+                { icon: "fas fa-laptop-code", title: "Computer Science", desc: "Programming, databases and practical assignments", price: "Rs. 3,000" },
+                { icon: "fas fa-comments", title: "Spoken English", desc: "Speaking, grammar and writing skills", price: "Rs. 2,500" },
+                { icon: "fas fa-palette", title: "Drawing & Arts", desc: "Sketching, painting and creative fundamentals", price: "Rs. 2,000" }
+            ]
+        };
+        var seedNotes = [
+            { class: "9th Class", subject: "Maths", desc: "Complete chapter-wise notes PDF", pdf: "" },
+            { class: "9th Class", subject: "Physics", desc: "Numericals & theory notes", pdf: "" },
+            { class: "9th Class", subject: "Chemistry", desc: "Reactions & equations notes", pdf: "" },
+            { class: "9th Class", subject: "Biology", desc: "Diagrams & practical notes included", pdf: "" },
+            { class: "9th Class", subject: "English", desc: "Grammar & comprehension notes", pdf: "" },
+            { class: "9th Class", subject: "Computer Science", desc: "Programming basics notes", pdf: "" },
+            { class: "10th Class", subject: "Maths", desc: "Full syllabus with solved exercises", pdf: "" },
+            { class: "10th Class", subject: "Physics", desc: "Full syllabus with solved exercises", pdf: "" },
+            { class: "10th Class", subject: "Chemistry", desc: "Complete solved notes", pdf: "" },
+            { class: "10th Class", subject: "Biology", desc: "Complete solved notes", pdf: "" },
+            { class: "10th Class", subject: "Islamiat", desc: "Important short questions & MCQs", pdf: "" },
+            { class: "10th Class", subject: "Pak Studies", desc: "Complete solved past papers", pdf: "" },
+            { class: "1st Year", subject: "Physics", desc: "Numericals, theory and MCQs", pdf: "" },
+            { class: "1st Year", subject: "Chemistry", desc: "1st year complete notes", pdf: "" },
+            { class: "1st Year", subject: "Biology", desc: "Diagrams, genetics notes", pdf: "" },
+            { class: "1st Year", subject: "Maths", desc: "Calculus & algebra notes", pdf: "" },
+            { class: "1st Year", subject: "Computer Science", desc: "Java & programming notes", pdf: "" },
+            { class: "2nd Year", subject: "Physics", desc: "Numericals, theory and MCQs", pdf: "" },
+            { class: "2nd Year", subject: "Chemistry", desc: "2nd year complete notes", pdf: "" },
+            { class: "2nd Year", subject: "Biology", desc: "Evolution & genetics notes", pdf: "" },
+            { class: "2nd Year", subject: "Maths", desc: "Vectors & integration notes", pdf: "" },
+            { class: "2nd Year", subject: "Computer Science", desc: "Web development (HTML/Bootstrap) notes", pdf: "" }
+        ];
+        var seedGuess = [
+            { class: "9th Class", subject: "Maths", desc: "100% Updated | Most Important Questions", pdf: "" },
+            { class: "9th Class", subject: "Physics", desc: "Numericals & short questions", pdf: "" },
+            { class: "9th Class", subject: "Chemistry", desc: "Important reactions & MCQs", pdf: "" },
+            { class: "9th Class", subject: "Biology", desc: "Important long & short questions", pdf: "" },
+            { class: "9th Class", subject: "English", desc: "Essay & grammar guess", pdf: "" },
+            { class: "10th Class", subject: "Maths", desc: "Matric Board Exams 2025", pdf: "" },
+            { class: "10th Class", subject: "Physics", desc: "Numericals & short questions", pdf: "" },
+            { class: "10th Class", subject: "Chemistry", desc: "Important reactions & MCQs", pdf: "" },
+            { class: "10th Class", subject: "Biology", desc: "Important long & short questions", pdf: "" },
+            { class: "10th Class", subject: "Computer Science", desc: "Programming guess (Java/C++)", pdf: "" },
+            { class: "1st Year", subject: "Physics", desc: "FSc Pre-Medical/Engineering", pdf: "" },
+            { class: "1st Year", subject: "Chemistry", desc: "Important MCQs & numericals", pdf: "" },
+            { class: "1st Year", subject: "Biology", desc: "Important long questions", pdf: "" },
+            { class: "1st Year", subject: "Computer Science", desc: "Java & Bootstrap guess", pdf: "" },
+            { class: "2nd Year", subject: "Physics", desc: "Complete Guess Papers", pdf: "" },
+            { class: "2nd Year", subject: "Chemistry", desc: "Important MCQs & numericals", pdf: "" },
+            { class: "2nd Year", subject: "Biology", desc: "Important long questions", pdf: "" },
+            { class: "2nd Year", subject: "Computer Science", desc: "Web dev & programming guess", pdf: "" }
+        ];
+        var seedReviews = [
+            { studentName: "Ali Raza", tutorName: "Sir Siddique", rating: "5", comment: "Sir Siddique ka Maths parhany ka tareeqa bohat clear hai, board exam mein A+ liya." },
+            { studentName: "Ayesha Khan", tutorName: "Miss Aliya", rating: "5", comment: "Biology ke mushkil topics bhi asani se samajh aa jatay hain, best tutor!" },
+            { studentName: "Hamza Tariq", tutorName: "Sir Ahmed", rating: "4", comment: "English grammar bohat behtar ho gayi hai in ki class join karnay ke baad." }
+        ];
+
+        async function seedIfEmpty() {
+            try {
+                var tSnap = await getDocs(collection(db, 'tutors'));
+                if (tSnap.empty) { for (const t of seedTutors) await addDoc(collection(db, 'tutors'), t); }
+                var cSnap = await getDocs(collection(db, 'courses'));
+                if (cSnap.empty) {
+                    for (const cat of ['matric','inter','academy']) {
+                        for (const c of seedCourses[cat]) await addDoc(collection(db, 'courses'), Object.assign({ category: cat }, c));
+                    }
+                }
+                var nSnap = await getDocs(collection(db, 'notes'));
+                if (nSnap.empty) { for (const n of seedNotes) await addDoc(collection(db, 'notes'), n); }
+                var gSnap = await getDocs(collection(db, 'guess'));
+                if (gSnap.empty) { for (const g of seedGuess) await addDoc(collection(db, 'guess'), g); }
+                var rSnap = await getDocs(collection(db, 'reviews'));
+                if (rSnap.empty) { for (const r of seedReviews) await addDoc(collection(db, 'reviews'), r); }
+            } catch (e) { console.error('Seed error:', e); }
+        }
+
+        /* ================= LIVE LISTENERS (auto-update for every visitor, no refresh needed) ================= */
+        function startListeners() {
+            onSnapshot(collection(db, 'tutors'), function (snap) {
+                tutorsData = snap.docs.map(function (d) { return Object.assign({ id: d.id }, d.data()); });
+                renderTutors();
+            });
+            onSnapshot(collection(db, 'courses'), function (snap) {
+                coursesData = { matric: [], inter: [], academy: [] };
+                snap.docs.forEach(function (d) {
+                    var data = Object.assign({ id: d.id }, d.data());
+                    if (coursesData[data.category]) coursesData[data.category].push(data);
+                });
+                renderCourses();
+            });
+            onSnapshot(collection(db, 'notes'), function (snap) {
+                notesData = snap.docs.map(function (d) { return Object.assign({ id: d.id }, d.data()); });
+                renderNotes();
+            });
+            onSnapshot(collection(db, 'guess'), function (snap) {
+                guessData = snap.docs.map(function (d) { return Object.assign({ id: d.id }, d.data()); });
+                renderGuess();
+            });
+            onSnapshot(collection(db, 'reviews'), function (snap) {
+                reviewsData = snap.docs.map(function (d) { return Object.assign({ id: d.id }, d.data()); });
+                renderReviews();
+            });
+        }
+
+        /* ================= PUBLIC RENDER ================= */
+        function renderCourses() {
+            ['matric', 'inter', 'academy'].forEach(function (cat) {
+                var el = document.getElementById(cat + '-courses');
+                if (!el) return;
+                el.innerHTML = coursesData[cat].map(function (c) {
+                    return '<div class="course-card">' +
+                        '<i class="' + c.icon + ' course-icon"></i>' +
+                        '<h3>' + c.title + '</h3>' +
+                        '<p>' + c.desc + '</p>' +
+                        '<div class="course-price" style="color:#2563eb;font-weight:700;margin-top:8px;">' + c.price + '</div>' +
+                        '<button class="download-btn" style="background:linear-gradient(45deg,#2563eb,#1e40af);" onclick="alert(\'Enrolling soon!\')">Join Now</button>' +
+                    '</div>';
+                }).join('');
+            });
+        }
+
+        function getClasses(arr) {
+            var seen = [], out = [];
+            arr.forEach(function (i) { if (seen.indexOf(i.class) === -1) { seen.push(i.class); out.push(i.class); } });
+            return out;
+        }
+
+        function renderNotes() {
+            var filterEl = document.getElementById('notesClassFilter');
+            if (!filterEl) return;
+            var classes = getClasses(notesData);
+            if (filterEl.options.length === 0) {
+                filterEl.innerHTML = '<option value="all">All Classes</option>' + classes.map(function (c) { return '<option value="' + c + '">' + c + '</option>'; }).join('');
+            }
+            var selectedClass = filterEl.value || 'all';
+            var q = (document.getElementById('notesSearch').value || '').toLowerCase();
+            var list = notesData.filter(function (n) {
+                var classMatch = selectedClass === 'all' || n.class === selectedClass;
+                var searchMatch = n.subject.toLowerCase().includes(q) || n.class.toLowerCase().includes(q);
+                return classMatch && searchMatch;
+            });
+            var el = document.getElementById('notesGrid');
+            el.innerHTML = list.map(function (n) {
+                var btn = n.pdf ?
+                    '<a class="download-btn" style="display:inline-block;text-decoration:none;" href="' + n.pdf + '" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download PDF</a>' :
+                    '<button class="download-btn" onclick="alert(\'PDF jald add hogi.\')"><i class="fas fa-download"></i> Download PDF</button>';
+                return '<div class="note-card">' +
+                    '<div style="color:#2563eb;font-weight:600;font-size:0.85rem;margin-bottom:4px;">' + n.class + '</div>' +
+                    '<h3>' + n.subject + ' Notes</h3>' +
+                    '<p>' + n.desc + '</p>' +
+                    btn +
+                '</div>';
+            }).join('') || '<p style="text-align:center;color:#9ca3af;grid-column:1/-1;">Koi note nahi mila.</p>';
+        }
+
+        function renderGuess() {
+            var filterEl = document.getElementById('guessClassFilter');
+            if (!filterEl) return;
+            var classes = getClasses(guessData);
+            if (filterEl.options.length === 0) {
+                filterEl.innerHTML = '<option value="all">All Classes</option>' + classes.map(function (c) { return '<option value="' + c + '">' + c + '</option>'; }).join('');
+            }
+            var selectedClass = filterEl.value || 'all';
+            var list = guessData.filter(function (g) { return selectedClass === 'all' || g.class === selectedClass; });
+            var el = document.getElementById('guessGrid');
+            el.innerHTML = list.map(function (g) {
+                var btn = g.pdf ?
+                    '<a class="download-btn" style="display:inline-block;text-decoration:none;" href="' + g.pdf + '" target="_blank" rel="noopener">Download All</a>' :
+                    '<button class="download-btn" onclick="alert(\'PDF jald add hogi.\')">Download All</button>';
+                return '<div class="guess-card">' +
+                    '<div style="color:#2563eb;font-weight:600;font-size:0.85rem;margin-bottom:4px;">' + g.class + '</div>' +
+                    '<div class="guess-year">' + g.subject + '</div>' +
+                    '<p>' + g.desc + '</p>' +
+                    btn +
+                '</div>';
+            }).join('') || '<p style="text-align:center;color:#9ca3af;grid-column:1/-1;">Koi guess paper nahi mila.</p>';
+        }
+
+        function renderTutors() {
+            var el = document.getElementById('tutorsGrid');
+            if (!el) return;
+            el.innerHTML = tutorsData.map(function (t) {
+                var avatar = t.image ?
+                    '<img src="' + t.image + '" alt="' + t.name + '" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'flex\';"><span style="display:none;width:100%;height:100%;align-items:center;justify-content:center;">' + t.initials + '</span>' :
+                    '<span style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;">' + t.initials + '</span>';
+                return '<div class="tutor-card" style="text-align:center;">' +
+                    '<div class="tutor-image">' + avatar + '</div>' +
+                    '<h3>' + t.name + '</h3>' +
+                    '<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> ' + t.rating + ' (' + t.reviews + ')</div>' +
+                    '<p style="margin-top:8px; color:#6b7280;">' + t.subject + '</p>' +
+                '</div>';
+            }).join('');
+            populateTutorDropdown();
+        }
+
+        function populateTutorDropdown() {
+            var sel = document.getElementById('r_tutorName');
+            if (!sel) return;
+            var current = sel.value;
+            sel.innerHTML = tutorsData.map(function (t) { return '<option value="' + t.name + '">' + t.name + '</option>'; }).join('');
+            if (current) sel.value = current;
+        }
+
+        function starsHtml(count) {
+            var n = parseInt(count) || 0;
+            var out = '';
+            for (var i = 0; i < 5; i++) { out += '<i class="fas fa-star" style="' + (i < n ? '' : 'opacity:0.25;') + '"></i>'; }
+            return out;
+        }
+
+        function renderReviews() {
+            var track = document.getElementById('reviewsTrack');
+            var dotsEl = document.getElementById('reviewsDots');
+            if (!track) return;
+            var list = reviewsData;
+            if (list.length === 0) {
+                track.innerHTML = '<div class="review-slide"><p style="text-align:center;color:#9ca3af;">Abhi tak koi review nahi.</p></div>';
+                dotsEl.innerHTML = '';
+                return;
+            }
+            track.innerHTML = list.map(function (r) {
+                return '<div class="review-slide"><div class="guess-card review-card">' +
+                    '<div class="review-stars">' + starsHtml(r.rating) + '</div>' +
+                    '<p class="review-comment">"' + r.comment + '"</p>' +
+                    '<div class="review-footer">' +
+                        '<span class="review-student">' + r.studentName + '</span>' +
+                        '<span class="review-tutor">for ' + r.tutorName + '</span>' +
+                    '</div>' +
+                '</div></div>';
+            }).join('');
+            dotsEl.innerHTML = list.map(function (r, i) { return '<span onclick="goToReviewSlide(' + i + ')"></span>'; }).join('');
+            if (currentReviewSlide >= list.length) currentReviewSlide = 0;
+            updateReviewSlidePosition();
+            startReviewAutoplay();
+        }
+
+        function updateReviewSlidePosition() {
+            var track = document.getElementById('reviewsTrack');
+            if (!track) return;
+            track.style.transform = 'translateX(-' + (currentReviewSlide * 100) + '%)';
+            document.querySelectorAll('#reviewsDots span').forEach(function (d, i) { d.classList.toggle('active', i === currentReviewSlide); });
+        }
+        function nextReviewSlide() {
+            var total = reviewsData.length;
+            if (total === 0) return;
+            currentReviewSlide = (currentReviewSlide + 1) % total;
+            updateReviewSlidePosition(); startReviewAutoplay();
+        }
+        function prevReviewSlide() {
+            var total = reviewsData.length;
+            if (total === 0) return;
+            currentReviewSlide = (currentReviewSlide - 1 + total) % total;
+            updateReviewSlidePosition(); startReviewAutoplay();
+        }
+        function goToReviewSlide(i) { currentReviewSlide = i; updateReviewSlidePosition(); startReviewAutoplay(); }
+        function startReviewAutoplay() {
+            if (reviewAutoplayTimer) clearInterval(reviewAutoplayTimer);
+            reviewAutoplayTimer = setInterval(nextReviewSlide, 4000);
+        }
+
+        function setReviewRating(n) {
+            document.getElementById('r_rating').value = n;
+            document.querySelectorAll('#r_ratingStars i').forEach(function (star) { star.classList.toggle('active', parseInt(star.dataset.val) <= n); });
+        }
+
+        async function submitReview() {
+            var studentName = document.getElementById('r_studentName').value.trim();
+            var tutorName = document.getElementById('r_tutorName').value;
+            var rating = document.getElementById('r_rating').value;
+            var comment = document.getElementById('r_comment').value.trim();
+            if (!studentName || !comment) { alert('Naam aur comment zaroori hain.'); return; }
+            try {
+                await addDoc(collection(db, 'reviews'), { studentName: studentName, tutorName: tutorName, rating: rating, comment: comment });
+                document.getElementById('r_studentName').value = '';
+                document.getElementById('r_comment').value = '';
+                setReviewRating(5);
+                alert('Shukriya! Aapka review submit ho gaya.');
+            } catch (e) { alert('Error: ' + e.message); }
+        }
+
+        /* ================= NAV / TABS ================= */
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+        function showTab(tab, el) {
+            document.querySelectorAll('.courses-grid').forEach(function (g) { g.style.display = 'none'; });
+            document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+            document.getElementById(tab + '-courses').style.display = 'grid';
+            el.classList.add('active');
+        }
+        document.addEventListener('click', function (e) {
+            var a = e.target.closest('a[href^="#"]');
+            if (!a) return;
+            var target = document.querySelector(a.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('navLinks').classList.remove('active');
+                document.querySelector('.hamburger').classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        });
+
+        /* ================= ADMIN PANEL (secured with Firebase Authentication) ================= */
+        function openAdmin() {
+            document.getElementById('adminOverlay').classList.add('active');
+            document.getElementById('navLinks').classList.remove('active');
+            if (auth.currentUser) { showDashboard(); }
+            else {
+                document.getElementById('adminLoginBox').style.display = 'block';
+                document.getElementById('adminDashboard').style.display = 'none';
+            }
+        }
+        function closeAdmin() { document.getElementById('adminOverlay').classList.remove('active'); }
+
+        async function adminLogin() {
+            var email = document.getElementById('adminEmail').value.trim();
+            var pass = document.getElementById('adminPass').value;
+            document.getElementById('adminErr').textContent = '';
+            try {
+                await signInWithEmailAndPassword(auth, email, pass);
+                document.getElementById('adminPass').value = '';
+                showDashboard();
+            } catch (e) {
+                document.getElementById('adminErr').textContent = 'Ghalat email ya password.';
+            }
+        }
+        async function adminLogout() {
+            await signOut(auth);
+            closeAdmin();
+        }
+        function showDashboard() {
+            document.getElementById('adminLoginBox').style.display = 'none';
+            document.getElementById('adminDashboard').style.display = 'block';
+            renderAdminLists();
+        }
+        function showAdminTab(tab, el) {
+            document.querySelectorAll('.admin-panel-section').forEach(function (s) { s.classList.remove('active'); });
+            document.querySelectorAll('.admin-tab-btn').forEach(function (b) { b.classList.remove('active'); });
+            document.getElementById('admin-' + tab).classList.add('active');
+            el.classList.add('active');
+        }
+
+        function renderAdminLists() {
+            document.getElementById('adminTutorsList').innerHTML = tutorsData.map(function (t) {
+                return '<div class="admin-list-item">' +
+                    (t.image ? '<img class="thumb" src="' + t.image + '" onerror="this.src=\'https://via.placeholder.com/45\';">' : '') +
+                    '<div class="info"><strong>' + t.name + '</strong><span>' + t.subject + '</span></div>' +
+                    '<button class="admin-del-btn" onclick="deleteItem(\'tutors\', \'' + t.id + '\')">Delete</button>' +
+                '</div>';
+            }).join('') || '<p style="color:#9ca3af;">Koi tutor nahi.</p>';
+
+            var courseHtml = '';
+            ['matric', 'inter', 'academy'].forEach(function (cat) {
+                coursesData[cat].forEach(function (c) {
+                    courseHtml += '<div class="admin-list-item">' +
+                        '<div class="info"><strong>' + c.title + ' <span style="color:#2563eb;">(' + cat + ')</span></strong><span>' + c.desc + ' — ' + c.price + '</span></div>' +
+                        '<button class="admin-del-btn" onclick="deleteCourse(\'' + cat + '\', \'' + c.id + '\')">Delete</button>' +
+                    '</div>';
+                });
+            });
+            document.getElementById('adminCoursesList').innerHTML = courseHtml || '<p style="color:#9ca3af;">Koi course nahi.</p>';
+
+            document.getElementById('adminNotesList').innerHTML = notesData.map(function (n) {
+                return '<div class="admin-list-item">' +
+                    '<div class="info"><strong>' + n.subject + ' <span style="color:#2563eb;">(' + n.class + ')</span></strong><span>' + n.desc + (n.pdf ? ' — PDF attached' : ' — no PDF yet') + '</span></div>' +
+                    '<button class="admin-del-btn" onclick="deleteItem(\'notes\', \'' + n.id + '\')">Delete</button>' +
+                '</div>';
+            }).join('') || '<p style="color:#9ca3af;">Koi note nahi.</p>';
+
+            document.getElementById('adminGuessList').innerHTML = guessData.map(function (g) {
+                return '<div class="admin-list-item">' +
+                    '<div class="info"><strong>' + g.subject + ' <span style="color:#2563eb;">(' + g.class + ')</span></strong><span>' + g.desc + (g.pdf ? ' — PDF attached' : ' — no PDF yet') + '</span></div>' +
+                    '<button class="admin-del-btn" onclick="deleteItem(\'guess\', \'' + g.id + '\')">Delete</button>' +
+                '</div>';
+            }).join('') || '<p style="color:#9ca3af;">Koi guess paper nahi.</p>';
+
+            document.getElementById('adminReviewsList').innerHTML = reviewsData.map(function (r) {
+                return '<div class="admin-list-item">' +
+                    '<div class="info"><strong>' + r.studentName + ' <span style="color:#2563eb;">→ ' + r.tutorName + ' (' + r.rating + '★)</span></strong><span>' + r.comment + '</span></div>' +
+                    '<button class="admin-del-btn" onclick="deleteItem(\'reviews\', \'' + r.id + '\')">Delete</button>' +
+                '</div>';
+            }).join('') || '<p style="color:#9ca3af;">Koi review nahi.</p>';
+        }
+
+        async function addTutor() {
+            var name = document.getElementById('t_name').value.trim();
+            var subject = document.getElementById('t_subject').value.trim();
+            var rating = document.getElementById('t_rating').value.trim() || '5.0';
+            var reviews = document.getElementById('t_reviews').value.trim() || '0';
+            var image = document.getElementById('t_image').value.trim();
+            if (!name || !subject) { alert('Naam aur subject zaroori hain.'); return; }
+            var initials = name.replace(/^Sir |^Miss /i, '').split(' ').map(function (w) { return w[0]; }).join('').substring(0, 2).toUpperCase();
+            try {
+                await addDoc(collection(db, 'tutors'), { name: name, image: image, initials: initials, subject: subject, rating: rating, reviews: reviews });
+                document.getElementById('t_name').value = ''; document.getElementById('t_subject').value = '';
+                document.getElementById('t_rating').value = ''; document.getElementById('t_reviews').value = ''; document.getElementById('t_image').value = '';
+            } catch (e) { alert('Error: ' + e.message); }
+        }
+
+        async function addCourse() {
+            var cat = document.getElementById('c_category').value;
+            var title = document.getElementById('c_title').value.trim();
+            var icon = document.getElementById('c_icon').value.trim() || 'fas fa-book';
+            var desc = document.getElementById('c_desc').value.trim();
+            var price = document.getElementById('c_price').value.trim();
+            if (!title || !desc || !price) { alert('Title, description aur price zaroori hain.'); return; }
+            try {
+                await addDoc(collection(db, 'courses'), { category: cat, icon: icon, title: title, desc: desc, price: price });
+                document.getElementById('c_title').value = ''; document.getElementById('c_icon').value = '';
+                document.getElementById('c_desc').value = ''; document.getElementById('c_price').value = '';
+            } catch (e) { alert('Error: ' + e.message); }
+        }
+
+        async function addNote() {
+            var cls = document.getElementById('n_class').value;
+            var subject = document.getElementById('n_subject').value.trim();
+            var desc = document.getElementById('n_desc').value.trim();
+            var pdf = document.getElementById('n_pdf').value.trim();
+            if (!subject || !desc) { alert('Subject aur description zaroori hain.'); return; }
+            try {
+                await addDoc(collection(db, 'notes'), { class: cls, subject: subject, desc: desc, pdf: pdf });
+                document.getElementById('n_subject').value = ''; document.getElementById('n_desc').value = ''; document.getElementById('n_pdf').value = '';
+            } catch (e) { alert('Error: ' + e.message); }
+        }
+
+        async function addGuess() {
+            var cls = document.getElementById('g_class').value;
+            var subject = document.getElementById('g_subject').value.trim();
+            var desc = document.getElementById('g_desc').value.trim();
+            var pdf = document.getElementById('g_pdf').value.trim();
+            if (!subject || !desc) { alert('Subject aur description zaroori hain.'); return; }
+            try {
+                await addDoc(collection(db, 'guess'), { class: cls, subject: subject, desc: desc, pdf: pdf });
+                document.getElementById('g_subject').value = ''; document.getElementById('g_desc').value = ''; document.getElementById('g_pdf').value = '';
+            } catch (e) { alert('Error: ' + e.message); }
+        }
+
+        async function deleteItem(type, id) {
+            if (!confirm('Delete karna hai?')) return;
+            try { await deleteDoc(doc(db, type, id)); } catch (e) { alert('Error: ' + e.message); }
+        }
+        async function deleteCourse(cat, id) {
+            if (!confirm('Delete karna hai?')) return;
+            try { await deleteDoc(doc(db, 'courses', id)); } catch (e) { alert('Error: ' + e.message); }
+        }
+
+        /* ================= EXPOSE FUNCTIONS USED BY inline onclick/onchange IN THE HTML ================= */
+        window.toggleMenu = toggleMenu;
+        window.showTab = showTab;
+        window.openAdmin = openAdmin;
+        window.closeAdmin = closeAdmin;
+        window.adminLogin = adminLogin;
+        window.adminLogout = adminLogout;
+        window.showAdminTab = showAdminTab;
+        window.addTutor = addTutor;
+        window.addCourse = addCourse;
+        window.addNote = addNote;
+        window.addGuess = addGuess;
+        window.deleteItem = deleteItem;
+        window.deleteCourse = deleteCourse;
+        window.setReviewRating = setReviewRating;
+        window.submitReview = submitReview;
+        window.nextReviewSlide = nextReviewSlide;
+        window.prevReviewSlide = prevReviewSlide;
+        window.goToReviewSlide = goToReviewSlide;
+        window.renderNotes = renderNotes;
+        window.renderGuess = renderGuess;
+
+        /* ================= INIT ================= */
+        startListeners();
+        onAuthStateChanged(auth, function (user) {
+            if (user) { seedIfEmpty(); }
+        });
+    </script>
+</body>
+</html>
